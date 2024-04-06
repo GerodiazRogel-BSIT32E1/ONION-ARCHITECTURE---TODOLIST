@@ -25,6 +25,10 @@ namespace Todolist.Repositories
             todoList.Add(toDo);
             return toDo;
         }
+         public async Task<int> SaveChangeAsync(CancellationToken cancellationToken = default) {
+            return await_context.SaveChangeAsync(cancellationToken)
+        }
+
 
         public IEnumerable<ToDo> GetAll()
         {

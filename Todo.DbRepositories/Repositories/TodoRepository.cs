@@ -15,6 +15,10 @@ namespace Todolist.Repositories
             throw new NotImplementedException();
         }
 
+        public async Task<int> SaveChangeAsync(CancellationToken cancellationToken = default) {
+            return await_context.SaveChangeAsync(cancellationToken)
+        }
+
         public IEnumerable<ToDo> GetAll()
         {
             return _context.ToDoS.AsEnumerable();
